@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Manushree Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #2c2c54, #0b0119);
+            color: white;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #08083c;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a.active,
+        nav ul li a:hover {
+            color: #8a00d4;
+        }
+
+        .contact-section {
+            max-width: 700px;
+            margin: 120px auto;
+            padding: 40px;
+            background-color: rgba(30, 30, 61, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .contact-section h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ff79c6;
+            font-size: 2.5rem;
+        }
+
+        .contact-section p {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            color: #e0e0e0;
+        }
+
+        .form-container {
+            background: #2a2a4a;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background: #3e3e5e;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            background: #5e5e8e;
+            box-shadow: 0 4px 15px rgba(138, 0, 212, 0.4);
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #8a00d4;
+            color: white;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #7c00c2;
+            transform: scale(1.05);
+        }
+
+        .form-response {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            margin: 0 15px;
+            color: #8a00d4;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ff79c6;
+            transform: translateY(-5px);
+        }
+
+        .social-icons {
+            font-size: 1.8rem;
+        }
+
+        .footer-rights {
+            text-align: center;
+            color: gray;
+            margin-top: 60px;
+        }
+
+        .floating-shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        .floating-shape-1 {
+            top: 5%;
+            left: 10%;
+        }
+
+        .floating-shape-2 {
+            bottom: 15%;
+            right: 15%;
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="left">MANUSHREE</div>
+        <div class="right">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="contact-section">
+        <h1>Contact Me</h1>
+        <p>Feel free to reach out for collaborations or just a friendly chat. I'm always open to new opportunities!</p>
+
+        <div class="form-container">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" placeholder="Your message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div class="form-response" id="formResponse"></div>
+        </div>
+
+        <div class="social-links">
+            <p>Connect with me on</p>
+            <div class="social-icons">
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating shapes for added creativity -->
+    <div class="floating-shape floating-shape-1"></div>
+    <div class="floating-shape floating-shape-2"></div>
+
+    <footer>
+        <div class="footer-rights">
+            <p>Copyright &#169; 2024 Manushree Portfolio | All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // Contact form functionality (Optional)
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('formResponse').textContent = "Thank you for reaching out! I'll get back to you soon.";
+        });
+    </script>
+
+</body>
+
+</html>

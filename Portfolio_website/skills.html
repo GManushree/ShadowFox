@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Manushree Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1b1b33, #3d3d5c);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #08083c;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff79c6;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 60px;
+            margin: 40px 0;
+            color: #ff79c6;
+            font-weight: 600;
+            animation: fadeInDown 1.5s ease;
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .skills-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 40px 100px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .skill {
+            margin: 20px;
+            text-align: center;
+            width: 150px;
+            transition: transform 0.4s ease;
+        }
+
+        .skill:hover {
+            transform: scale(1.1);
+        }
+
+        .skill img {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .skill img:hover {
+            transform: scale(1.2);
+            box-shadow: 0 8px 25px rgba(255, 121, 198, 0.8);
+        }
+
+        .skill-name {
+            margin-top: 15px;
+            font-size: 1.3rem;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .footer-rights {
+            text-align: center;
+            color: gray;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        .floating-shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        .floating-shape-1 {
+            top: 15%;
+            left: 10%;
+        }
+
+        .floating-shape-2 {
+            bottom: 20%;
+            right: 15%;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="left">MANUSHREE</div>
+        <div class="right">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html" class="active">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="heading">
+        Skills
+    </section>
+
+    <section class="skills-section">
+        <div class="skill">
+            <img src="./assets/html-5_5968267.png" alt="HTML">
+            <div class="skill-name">HTML</div>
+        </div>
+        <div class="skill">
+            <img src="./assets/css-3_5968242.png" alt="CSS">
+            <div class="skill-name">CSS</div>
+        </div>
+        <div class="skill">
+            <img src="./assets/java-script.png" alt="JavaScript">
+            <div class="skill-name">JavaScript</div>
+        </div>
+        <div class="skill">
+            <img src="./assets/bootstrap-png-bootstrap-512.png.crdownload" alt="Bootstrap">
+            <div class="skill-name">Bootstrap</div>
+        </div>
+        <div class="skill">
+            <img src="./assets/java_919854.png" alt="Java">
+            <div class="skill-name">Java</div>
+        </div>
+        <div class="skill">
+            <img src="./assets/python_5968350.png" alt="Python">
+            <div class="skill-name">Python</div>
+        </div>
+    </section>
+
+    <!-- Floating shapes for added creativity -->
+    <div class="floating-shape floating-shape-1"></div>
+    <div class="floating-shape floating-shape-2"></div>
+
+    <footer>
+        <div class="footer-rights">
+            <p>Copyright &#169; 2024 Manushree Portfolio | All rights reserved</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

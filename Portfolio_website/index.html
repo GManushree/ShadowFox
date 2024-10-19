@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manushree - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* General Resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body & Typography */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #1a1a1a, #2b0f57);
+            color: #f5f5f5;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            transition: background 0.5s ease;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #2b0f57;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s;
+        }
+
+        nav:hover {
+            background-color: #4a1a88;
+        }
+
+        nav .left {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #e0c3f1;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav .left:hover {
+            transform: scale(1.1);
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #e0c3f1;
+            transition: color 0.3s ease, background 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            color: #ff77ff;
+            background-color: rgba(255, 119, 255, 0.2);
+        }
+
+        /* Main Section */
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 60px 0;
+            transition: transform 0.3s ease-in-out;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .firstSection:hover {
+            transform: translateY(-5px);
+        }
+
+        .leftSection h1 {
+            font-size: 2.5rem;
+            color: #ff77ff;
+            animation: fadeInUp 1.5s ease-out;
+        }
+        .purple{
+            color: rgb(193, 138, 177);
+        }
+
+        .leftSection .buttons {
+            margin-top: 20px;
+        }
+
+        .leftSection .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #ff77ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 10px;
+            transition: background-color 0.3s, transform 0.3s ease;
+        }
+
+        .leftSection .btn:hover {
+            background-color: #d65db1;
+            transform: scale(1.05);
+        }
+
+        .rightSection img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+            animation: fadeInRight 1.5s ease-out;
+        }
+
+        .rightSection img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Parallax Section */
+        .parallax {
+            background: url('https://source.unsplash.com/random/1600x900') no-repeat center center/cover;
+            height: 400px;
+            position: relative;
+            margin: 60px 0;
+            background-attachment: fixed;
+        }
+
+        .parallax h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Second Section */
+        .secondSection {
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .secondSection h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ff77ff;
+            animation: fadeInUp 1s ease;
+        }
+
+        .vertical {
+            background-color: #2b0f57;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .vertical:hover {
+            transform: translateY(-3px);
+        }
+
+        .vertical-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #ff77ff;
+        }
+
+        .vertical-desc {
+            color: #d3d3d3;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2b0f57;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            transform: scale(1.1);
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .firstSection {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .leftSection {
+                text-align: center;
+                width: 100%;
+            }
+
+            .rightSection {
+                margin-top: 20px;
+            }
+
+            .firstSection {
+                margin: 40px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="left">MANUSHREE</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="active">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                <h1>Hi, My Name is <span class="purple">Manushree</span></h1>
+                <div>I am a passionate <span id="element"></span></div>
+                <div class="buttons">
+                    <a href="./assets/manuresumepdf.pdf" download="manuresumepdf.pdf" class="btn">Download Resume</a>
+                    <a href="https://github.com/GManushree" target="_blank" class="btn">Visit My GitHub Profile</a>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="./assets/pic.jpg" alt="Developer">
+            </div>
+        </section>
+
+        
+        <div class="parallax">
+            <h1>Tech Enthusiast</h1>
+        </div>
+
+        <section class="secondSection">
+            <h1>My Education</h1>
+            <div class="vertical">
+                <div class="vertical-title">BE in Information Science and Engineering</div>
+                <div class="vertical-desc">Pursuing my B.E degree at Cambridge Institute of Technology, Bangalore, India. Current aggregate CGPA: 9.15. Year of Passing: 2025.</div>
+            </div>
+            <div class="vertical">
+                <div class="vertical-title">12th Boards</div>
+                <div class="vertical-desc">Completed my 12th Boards (2019-2021) at Sri Chaitanya PU College, Bangalore, India. Overall percentage: 90%. Stream: PCMB.</div>
+            </div>
+            <div class="vertical">
+                <div class="vertical-title">10th Boards</div>
+                <div class="vertical-desc">Completed my 10th Boards (2019) from MTB Jnana Jyothi Vidyanikethan, Bangalore, India. Percentage: 83%.</div>
+            </div>
+            <div class="vertical">
+                <div class="vertical-title">Certifications and Achievements</div>
+                <div class="vertical-desc">• Natural language solution with Azure AI Language<br>• Digital 101 Journey - Future Skills Prime<br>• Machine Learning using Python internship work<br>• Cybersecurity analyst job simulation by Tata.</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <h3>Contact Me</h3>
+            <p>If you'd like to get in touch, feel free to reach out via email or connect with me on social media!</p>
+            <p>&copy; 2024 Manushree. All rights reserved.</p>
+            <div>
+                <i class="fas fa-envelope"></i> <strong>Email:</strong> manushree.ke@gmail.com<br>
+                <i class="fas fa-phone"></i> <strong>Phone:</strong> +91-95--------<br>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/g-manushree-7b3b5124b"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/GManushree"><i class="fab fa-github"></i></a>
+                <a href="@manushree_61134"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const skills = ['Student', 'Tech Enthusiast', 'Problem Solver', 'Developer'];
+        let skillIndex = 0;
+
+        
+        function cycleSkills() {
+            const skillElement = document.getElementById('element');
+            skillElement.innerText = skills[skillIndex];
+            skillIndex = (skillIndex + 1) % skills.length;
+        }
+
+        setInterval(cycleSkills, 2000);
+
+        
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        
+        function toggleTheme() {
+            document.body.classList.toggle('light-theme');
+            const isLight = document.body.classList.contains('light-theme');
+            document.body.style.background = isLight ? '#ffffff' : 'linear-gradient(to right, #1a1a1a, #4b006e)';
+            document.body.style.color = isLight ? '#000000' : '#f5f5f5';
+            const nav = document.querySelector('nav');
+            nav.style.backgroundColor = isLight ? '#4b006e' : '#4b006e';
+            nav.style.color = isLight ? '#000' : '#fff';
+        }
+    </script>
+
+</body>
+
+</html>

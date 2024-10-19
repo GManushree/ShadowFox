@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Manushree Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #2c2c54, #0b0119);
+            color: white;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #08083c;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a.active,
+        nav ul li a:hover {
+            color: #8a00d4;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 3rem;
+            margin: 80px 0 40px 0;
+            color: #8a00d4;
+            font-weight: 600;
+        }
+
+        .project-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 40px;
+            max-width: 1100px;
+        }
+
+        .project-card {
+            background-color: #1e1e3d;
+            margin: 20px;
+            padding: 20px;
+            width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(138, 0, 212, 0.6);
+        }
+
+        .project-card a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .project-card a:hover {
+            color: #ff79c6;
+        }
+
+        .project-description {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        .footer-rights {
+            text-align: center;
+            color: gray;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        .floating-shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        .floating-shape-1 {
+            top: 10%;
+            left: 15%;
+        }
+
+        .floating-shape-2 {
+            bottom: 20%;
+            right: 20%;
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="left">MANUSHREE</div>
+        <div class="right">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="heading">
+        Projects
+    </section>
+
+    <section class="project-section">
+        <div class="project-card">
+            <a href="#movie-recommendation">Movie Recommendation System</a>
+            <p class="project-description">A machine learning model to suggest movies based on user preferences.</p>
+        </div>
+        <div class="project-card">
+            <a href="#legal-advisor">Legal Advisor Chatbot</a>
+            <p class="project-description">A chatbot providing advice on Indian law and constitution, built using NLP.</p>
+        </div>
+        <div class="project-card">
+            <a href="#dairy-farm-management">Dairy Farm Management System</a>
+            <p class="project-description">A management solution for dairy farms, improving operational efficiency.</p>
+        </div>
+        <div class="project-card">
+            <a href="#watch-makers">Watch Makers Website using Django</a>
+            <p class="project-description">A custom e-commerce platform for watchmakers built with Django.</p>
+        </div>
+        <div class="project-card">
+            <a href="#facebook-automation">Facebook Automation Testing using Selenium</a>
+            <p class="project-description">Automated testing of Facebook functionalities with Selenium WebDriver.</p>
+        </div>
+    </section>
+
+    <!-- Floating shapes for added creativity -->
+    <div class="floating-shape floating-shape-1"></div>
+    <div class="floating-shape floating-shape-2"></div>
+
+    <footer>
+        <div class="footer-rights">
+            <p>Copyright &#169; 2024 Manushree Portfolio | All rights reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>

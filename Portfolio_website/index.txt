@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Manushree - Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #1f1f1f;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    nav .left {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    nav ul {
+      display: flex;
+    }
+
+    nav ul li {
+      list-style: none;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #f5f5f5;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #76c7c0;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .firstSection {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 60px 0;
+    }
+
+    .leftSection {
+      width: 50%;
+    }
+
+    .leftSection h1 {
+      font-size: 2.5rem;
+      color: #76c7c0;
+    }
+
+    .leftSection .buttons {
+      margin-top: 20px;
+    }
+
+    .leftSection .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #76c7c0;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-right: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .leftSection .btn:hover {
+      background-color: #64b1a9;
+    }
+
+    .rightSection img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .secondSection {
+      margin: 60px 0;
+      text-align: center;
+    }
+
+    .secondSection h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .vertical {
+      background-color: #1f1f1f;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .vertical-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #76c7c0;
+    }
+
+    .vertical-desc {
+      color: #b0b0b0;
+      font-size: 1rem;
+    }
+
+    footer {
+      background-color: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .social-icons img {
+      width: 30px;
+      margin: 0 10px;
+      transition: transform 0.3s;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.1);
+    }
+
+    @media screen and (max-width: 768px) {
+      .firstSection {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .leftSection {
+        text-align: center;
+        width: 100%;
+      }
+
+      .rightSection {
+        margin-top: 20px;
+      }
+
+      .firstSection {
+        margin: 40px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="left">MANUSHREE</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="firstSection">
+      <div class="leftSection">
+        <h1>Hi, My Name is <span class="purple">Manushree</span></h1>
+        <div>I am a passionate <span id="element"></span></div>
+        <div class="buttons">
+          <a href="./assets/manuresumepdf.pdf" download="manuresumepdf.pdf" class="btn">Download Resume</a>
+          <a href="https://github.com/GManushree" target="_blank" class="btn">Visit My GitHub Profile</a>
+        </div>
+      </div>
+      <div class="rightSection">
+        <img src="./assets/pic.jpg" alt="Developer">
+      </div>
+    </section>
+
+    <section class="secondSection">
+      <h1>My Education</h1>
+      <div class="vertical">
+        <div class="vertical-title">BE in Information Science and Engineering</div>
+        <div class="vertical-desc">Pursuing my B.E degree at Cambridge Institute of Technology, Bangalore, India. Current aggregate CGPA: 9.15. Year of Passing: 2025.</div>
+      </div>
+      <div class="vertical">
+        <div class="vertical-title">12th Boards</div>
+        <div class="vertical-desc">Completed my 12th Boards (2019-2021) at Sri Chaitanya PU College, Bangalore, India. Overall percentage: 90%. Stream: PCMB.</div>
+      </div>
+      <div class="vertical">
+        <div class="vertical-title">10th Boards</div>
+        <div class="vertical-desc">Completed my 10th Boards (2019) from MTB Jnana Jyothi Vidyanikethan, Bangalore, India. Percentage: 83%.</div>
+      </div>
+      <div class="vertical">
+        <div class="vertical-title">Certifications and Achievements</div>
+        <div class="vertical-desc">• Natural language solution with Azure AI Language<br>• Digital 101 Journey - Future Skills Prime<br>• Machine Learning using Python internship work<br>• Cybersecurity analyst job simulation by Tata.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <h3>Contact Me</h3>
+      <p>If you'd like to get in touch, feel free to reach out via email or connect with me on social media!</p>
+      <div>
+        <i class="fas fa-envelope"></i> <strong>Email:</strong> manushree.ke@gmail.com
+        <br>
+        <i class="fas fa-phone"></i> <strong>Phone:</strong> +91-95--------
+      </div>
+      <div class="social-icons">
+        <a href="https://github.com/GManushree" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/g-manushree-7b3b5124b" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+    <div class="footer-rights">
+      Copyright &copy; 2024 Manushree. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script>
+    const roles = ["Developer", "Designer", "Coder", "Tech Enthusiast"];
+    let index = 0;
+
+    function changeRole() {
+      document.getElementById("element").innerHTML = roles[index];
+      index = (index + 1) % roles.length;
+    }
+
+    setInterval(changeRole, 2000);
+    changeRole(); // Initial call to display the first role
+  </script>
+</body>
+
+</html>
