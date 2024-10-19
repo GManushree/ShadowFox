@@ -14,14 +14,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <style>
-        /* General Resets */
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body & Typography */
+        
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(to right, #1a1a1a, #2b0f57);
@@ -31,7 +31,7 @@
             transition: background 0.5s ease;
         }
 
-        /* Navbar */
+        
         nav {
             display: flex;
             justify-content: space-between;
@@ -79,7 +79,7 @@
             background-color: rgba(255, 119, 255, 0.2);
         }
 
-        /* Main Section */
+        
         main {
             padding: 40px 20px;
             max-width: 1200px;
@@ -144,7 +144,7 @@
             
         }
 
-        /* Parallax Section */
+        
         .parallax {
             background: url('https://source.unsplash.com/random/1600x900') no-repeat center center/cover;
             height: 400px;
@@ -275,17 +275,7 @@
 
 <body>
 
-    <!-- <header>
-        <nav>
-            <div class="left">MANUSHREE</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="skills">Skills</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html" class="active">Contact Me</a></li>
-            </ul>
-        </nav>-->
+ 
         <header>
             <nav>
               <div class="left">MANUSHREE</div>
@@ -361,15 +351,15 @@
     <script>
         const skills = ['Student', 'Tech Enthusiast', 'Problem Solver', 'Developer'];
         let skillIndex = 0;
-
-        
+    
         function changeRole() {
-            document.getElementById("element").innerHTML = roles[index];
-            index = (index + 1) % roles.length;
-          }
-      
-          setInterval(changeRole, 2000);
-          changeRole(); // Initial call to display the first role
-        </script>
+            document.getElementById("element").innerHTML = skills[skillIndex];
+            skillIndex = (skillIndex + 1) % skills.length;
+        }
+    
+        setInterval(changeRole, 2000); 
+        changeRole(); 
+    </script>
+    
       </body>
       </html>
