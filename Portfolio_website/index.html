@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <style>
         /* General Resets */
         * {
@@ -129,8 +130,8 @@
         }
 
         .rightSection img {
-            width: 300px;
-            height: 300px;
+            width: 400px;
+            height: 400px;
             border-radius: 50%;
             object-fit: cover;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -140,6 +141,7 @@
 
         .rightSection img:hover {
             transform: scale(1.1);
+            
         }
 
         /* Parallax Section */
@@ -199,7 +201,7 @@
             font-size: 1rem;
         }
 
-        /* Footer */
+        
         footer {
             background-color: #2b0f57;
             padding: 20px;
@@ -217,7 +219,7 @@
             transform: scale(1.1);
         }
 
-        /* Keyframe Animations */
+        
         @keyframes fadeIn {
             0% {
                 opacity: 0;
@@ -273,18 +275,31 @@
 
 <body>
 
-    <header>
+    <!-- <header>
         <nav>
             <div class="left">MANUSHREE</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="skills.html">Skills</a></li>
+                <li><a href="skills">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html" class="active">Contact Me</a></li>
             </ul>
-        </nav>
-    </header>
+        </nav>-->
+        <header>
+            <nav>
+              <div class="left">MANUSHREE</div>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="active">Contact Me</a></li>
+              </ul>
+            </nav>
+          </header>
+        
+    
 
     <main>
         <section class="firstSection">
@@ -348,36 +363,13 @@
         let skillIndex = 0;
 
         
-        function cycleSkills() {
-            const skillElement = document.getElementById('element');
-            skillElement.innerText = skills[skillIndex];
-            skillIndex = (skillIndex + 1) % skills.length;
-        }
-
-        setInterval(cycleSkills, 2000);
-
-        
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                targetElement.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        
-        function toggleTheme() {
-            document.body.classList.toggle('light-theme');
-            const isLight = document.body.classList.contains('light-theme');
-            document.body.style.background = isLight ? '#ffffff' : 'linear-gradient(to right, #1a1a1a, #4b006e)';
-            document.body.style.color = isLight ? '#000000' : '#f5f5f5';
-            const nav = document.querySelector('nav');
-            nav.style.backgroundColor = isLight ? '#4b006e' : '#4b006e';
-            nav.style.color = isLight ? '#000' : '#fff';
-        }
-    </script>
-
-</body>
-
-</html>
+        function changeRole() {
+            document.getElementById("element").innerHTML = roles[index];
+            index = (index + 1) % roles.length;
+          }
+      
+          setInterval(changeRole, 2000);
+          changeRole(); // Initial call to display the first role
+        </script>
+      </body>
+      </html>
